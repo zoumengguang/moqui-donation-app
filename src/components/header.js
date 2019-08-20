@@ -2,32 +2,44 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import Grid from "@material-ui/core/Grid"
+import icon from "../images/app-logo.svg"
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#FFFFFF`,
     }}
   >
-    <div
+    <Grid
+      container
+      alignItems="center"
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `0.9rem 0.9rem`,
       }}
     >
+      <img
+        style={{
+          height: "auto",
+          width: "6%",
+          margin: "0rem 0rem",
+        }}
+        src={icon}
+        alt="Application Icon"
+      />
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `#0a2f6c`,
             textDecoration: `none`,
+            marginLeft: "1rem",
           }}
         >
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </Grid>
   </header>
 )
 
@@ -36,7 +48,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `MK Donation Page`,
 }
 
 export default Header
